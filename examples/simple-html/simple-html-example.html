@@ -2,25 +2,19 @@
 <html>
   <head>
     <title>Hello React Sydney</title>
+
     <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/create-react-class@15.6.2/create-react-class.min.js"></script>
+
+    <script src="simple-html-example.js"></script>
   </head>
 
   <body>
     <div id="root"></div>
 
     <script type="text/javascript">
-      var Greeting = createReactClass({
-        render: function() {
-          return React.createElement('h1', null, this.props.name);
-        }
-      });
-
-      ReactDOM.render(
-        React.createElement(Greeting, { name: 'Hello React Sydney' }, null),
-        document.getElementById('root')
-      );
+        renderPage();
     </script>
   </body>
 </html>
