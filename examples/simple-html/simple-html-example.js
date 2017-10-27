@@ -10,3 +10,5 @@ function renderPage() {
     document.getElementById('root')
   );
 }
+
+// simple-html-example.js
