@@ -10,14 +10,8 @@ class MyReactJQueryComponent extends React.Component {
     const $tooltip = $(this._tooltipEl);
 
     $tooltip.tooltipster({
-      interactive: true,
-      content: this.props.tooltipCopy
+      contentCloning: true
     });
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const $tooltip = $(this._tooltipEl);
-    $tooltip.tooltipster('content', nextProps.tooltipCopy);
   }
 
   componentWillUnmount() {
@@ -28,9 +22,18 @@ class MyReactJQueryComponent extends React.Component {
 
   render() {
     return (
-      <div ref={ el => this._tooltipEl = el }
-           style={{ margin: '10em' }}>
-          Hover over this text to display tooltip.
+       <div>
+        <div style={{ display: 'none' }}>
+          <span id="tooltip_content">
+              <strong>{ this.props.tooltipCopy }</strong>
+          </span>
+        </div>
+
+        <div ref={ el => this._tooltipEl = el }
+             style={{ margin: '10em' }}
+             data-tooltip-content="#tooltip_content" >
+            Hover over this text to display tooltip.
+        </div>
       </div>
     );
   }
