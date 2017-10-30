@@ -1,0 +1,26 @@
+{
+  "name": "php-server-side-rendering",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "webpack",
+    "build-watch": "webpack --watch",
+    "test": "jest"
+  },
+  "author": "Tony Tsui <tony@glamcorner.com.au>",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^2.2.1",
+    "webpack-bundle-analyzer": "^2.8.3"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
