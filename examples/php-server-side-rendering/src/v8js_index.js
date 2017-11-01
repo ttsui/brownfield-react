@@ -6,10 +6,11 @@ const components = {
   'App': App
 };
 
-function serverRender(component) {
-  const componentClass = components[component];
+function serverRender(componentName) {
+  const componentClass = components[componentName];
+  const component = React.createElement(componentClass);
 
-  return ReactDOMServer.renderToString(React.createElement(componentClass));
+  return ReactDOMServer.renderToString(component);
 }
 
 export {
