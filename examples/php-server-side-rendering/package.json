@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --config react_php_v8js_webpack.config.babel.js && webpack --config v8js_webpack.config.babel.js",
     "build-watch": "webpack --watch",
     "test": "jest"
   },

@@ -2,7 +2,10 @@
 
 $v8 = new V8Js();
 
-$src = file_get_contents('./dist/main.js');
+$src = implode(";\n", [
+    file_get_contents('./dist/v8js_index.js'),
+    "v8js_index.serverRender('App');\n"
+]);
 
 try {
     $rendered = $v8->executeString($src);

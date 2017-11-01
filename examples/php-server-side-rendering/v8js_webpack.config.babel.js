@@ -2,7 +2,7 @@ const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const entryPoints = {
-    main: './src/index.js'
+    'v8js_index': './src/v8js_index.js'
 };
 
 export default () => (
