@@ -9,7 +9,7 @@ const components = {
 function serverRender(component) {
   const componentClass = components[component];
 
-  print(ReactDOMServer.renderToString(React.createElement(componentClass)));
+  return ReactDOMServer.renderToString(React.createElement(componentClass));
 }
 
 export {

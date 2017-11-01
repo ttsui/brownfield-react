@@ -4,7 +4,7 @@ $v8 = new V8Js();
 
 $src = implode(";\n", [
     file_get_contents('./dist/v8js_index.js'),
-    "v8js_index.serverRender('App');\n"
+    "print(v8js_index.serverRender('App'));\n"
 ]);
 
 try {
